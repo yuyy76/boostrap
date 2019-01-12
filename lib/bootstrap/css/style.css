@@ -20,6 +20,12 @@ body{
 
 .navbar-inverse .glyphicon-search{
     position: absolute;
-    top: 27%;
-    right: 10px;
+    top: 28%;
+    right: 24px;
+}
+
+@media(min-width:768px){
+    .navbar-inverse .glyphicon-search{
+        right: 38px;
+    }
 }
