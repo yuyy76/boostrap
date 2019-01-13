@@ -1,75 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./lib/bootstrap/css/style.css">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/bootstrap/css/style.css" />
+    <link
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#res-nav"
+          >
+            <span>
+              <class class="icon-bar"></class> <class class="icon-bar"></class>
+              <class class="icon-bar"></class>
+            </span>
+          </button>
 
-        <div class="container">
-
-            <div class="navbar-header">
-
-                <button class="navbar-toggle" data-toggle="collapse" data-target="#res-nav">
-                    <span>
-                        <class class="icon-bar"></class>
-                        <class class="icon-bar"></class>
-                        <class class="icon-bar"></class>
-                    </span>
-                </button>
-
-                <a href="#" class="navbar-brand"><strong>dafae.cn</strong></a>
-            </div>
-            <div class="collapse navbar-collapse" id="res-nav">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页</a></li>
-                    <li><a href="#">新闻</a></li>
-                    <li><a href="#">产品</a></li>
-                </ul>
-                <form action="" class="navbar-form navbar-left">
-                    <input type="text" placeholder="输入搜索内容" class="form-control">
-                    <button type="submit">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </form>
-                <a href="#" class="btn navbar-btn btn-primary btn-sm navbar-right hidden-xs">报名课程</a>
-                <div class="profile navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">注册</a></li>
-                        <li><a href="#">登陆</a></li>
-                    </ul>
-                    <p class="navbar-text ">您好，<a href="#" class="navbar-link">沙迦小鱼</a></p>
-                </div>
-
-            </div>
-
-
-
+          <a href="#" class="navbar-brand"><strong>dafae.cn</strong></a>
         </div>
+        <!-- 随页面拉伸 begin -->
+        <div class="collapse navbar-collapse" id="res-nav">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">产品</a></li>
+          </ul>
+          <form action="" class="navbar-form navbar-left">
+            <input
+              type="text"
+              placeholder="输入搜索内容"
+              class="form-control"
+            />
+            <button type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </form>
+          <a
+            href="#"
+            class="btn navbar-btn btn-primary btn-sm navbar-right hidden-xs"
+            >报名课程</a
+          >
+          <div class="profile navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="#">注册</a></li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#login">登录</a>
+              </li>
+            </ul>
+            <p class="navbar-text ">
+              您好，<a href="#" class="navbar-link">沙迦小鱼</a>
+            </p>
+          </div>
+        </div>
+        <!-- 随页面拉伸 end -->
+      </div>
     </nav>
 
+    <!-- <div class="container"> -->
+
+      <!-- 轮播图引入carousel插件 -->
+      <div class="carousel" id="lbt" data-interval="1000" data-wrap="true" data-pause="true">
+
+        <!-- 轮播图片用inner控制大小 -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="/lib/bootstrap/images/slide1.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="/lib/bootstrap/images/slide2.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="/lib/bootstrap/images/slide3.png" alt="" />
+          </div>
+        </div>
+
+        <!-- 轮播图的左右箭头 -->
+        <a href="#lbt" data-slide="prev" class="left carousel-control">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#lbt" data-slide="next" class="right carousel-control">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+        <!-- 轮播图下面的小圆点 -->
+        <ul class="carousel-indicators">
+          <li data-target="#lbt" data-slide-to="0" class="active"></li>
+          <li data-target="#lbt" data-slide-to="1"></li>
+          <li data-target="#lbt" data-slide-to="2"></li>
+        </ul>
+      </div>
+
+      <!-- 继续添加控制插件  -->
+      <div class="text-center">
+        <div class="btn-group" style="padding: 20px">
+          <button class="btn btn-default prev-btn">
+            <span class="glyphicon glyphicon-backward"></span>
+          </button>
+          <button class="btn btn-default play-btn">
+            <span class="glyphicon glyphicon-play"></span>
+          </button>
+          <button class="btn btn-default next-btn">
+            <span class="glyphicon glyphicon-forward"></span>
+          </button>
+        </div>
+      </div>
+
+    <!-- </div> -->
 
     <div class="container" style="height:1500px;">
-        <p class="alert alert-info"> Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Qui, quasi cum. Laudantium, vel illum!
-            Harum ipsum hic iusto numquam, cumque explicabo odio
-            consectetur veniam vero voluptate nisi natus fugiat facilis!</p>
+      <p class="alert alert-info">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, quasi
+        cum. Laudantium, vel illum! Harum ipsum hic iusto numquam, cumque
+        explicabo odio consectetur veniam vero voluptate nisi natus fugiat
+        facilis!
+      </p>
+    </div>
+
+    <div class="modal fade" id="login" tabindex="-1">
+      <div class="modal-dialog"><div class="modal-content"></div></div>
     </div>
 
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/jquery-3.3.1.min.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</body>
+    <script src="/lib/bootstrap/js/myself.js"></script>
 
+    <script>
+      $(function() {
+        $("#login").modal({
+          show: false,
+          backdrop: false,
+          remote: "login-form.html"
+        });
+      });
+    </script>
+  </body>
 </html>
